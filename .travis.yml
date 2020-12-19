@@ -3,11 +3,11 @@ services:
   - docker
 
 before_install:
-  - docker build -t  ballayo/docker-react -f Dockerfile.dev .
+  - docker build -t  ballayo/docker-react -f Dockerfile .
 
 script:
   - docker run -e CI=true ballayo/docker-react npm run test
-  #- docker run ballayo/docker-react npm run test -- -- coverage  
+  #- ddocker run ballayo/docker-react npm run test -- -- coverage  
 
 deploy:
   provider: elasticbeanstalk
