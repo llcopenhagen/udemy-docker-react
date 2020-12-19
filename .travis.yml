@@ -8,7 +8,7 @@ before_install:
 
 script:
   #- docker run -e CI=true ballayo/docker-react npm run test
-  - ddocker run ballayo/docker-react npm run test -- -- coverage  
+  - docker run ballayo/docker-react npm run test -- -- coverage  
 
 deploy:
   provider: elasticbeanstalk
